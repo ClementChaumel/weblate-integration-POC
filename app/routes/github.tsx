@@ -1,12 +1,12 @@
 import { Link } from "@remix-run/react";
-import { ChevronRight } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+import guytoube from "~/assets/guytoube.png";
 import pitioune from "~/assets/pitioune.png";
-import weblatescreen from "~/assets/weblatescreen.png";
 
 export default function Index() {
-  const { t, i18n } = useTranslation("landing");
+  const { t, i18n } = useTranslation("github");
 
   const swapLanguage = () => {
     i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr");
@@ -64,16 +64,16 @@ export default function Index() {
             </button>
           </div>
           <div className="mt-24 sm:mt-32 lg:mt-16">
-            <Link to="/github" className="inline-flex space-x-6">
-              <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
-                {t("translateWithWeblate")}
-              </span>
+            <Link to="/" className="inline-flex space-x-6">
               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
-                <span>{t("githubIntegration")}</span>
-                <ChevronRight
+                <ChevronLeft
                   className="h-5 w-5 text-gray-500"
                   aria-hidden="true"
                 />
+                <span>{t("translateWithWeblate")}</span>
+              </span>
+              <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
+                <span> {t("githubIntegration")}</span>
               </span>
             </Link>
           </div>
@@ -99,7 +99,7 @@ export default function Index() {
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <img
-              src={weblatescreen}
+              src={guytoube}
               alt="App screenshot"
               width={2432}
               height={1442}
