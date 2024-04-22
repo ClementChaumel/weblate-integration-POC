@@ -12,7 +12,7 @@ export default function Index() {
   };
 
   return (
-    <div className="bg-gray-900 relative isolate h-full overflow-hidden">
+    <div className="relative isolate h-full overflow-hidden bg-gray-900">
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -29,7 +29,7 @@ export default function Index() {
             <path d="M.5 200V.5H200" fill="none" />
           </pattern>
         </defs>
-        <svg x="50%" y={-1} className="fill-gray-800/20 overflow-visible">
+        <svg x="50%" y={-1} className="overflow-visible fill-gray-800/20">
           <path
             d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
             strokeWidth={0}
@@ -59,33 +59,33 @@ export default function Index() {
           <div className="flex justify-between">
             <img className="h-24" src={pitioune} alt="Your Company" />
             <button className="text-6xl" onClick={swapLanguage}>
-              {i18n.language === "fr" ? "🥐" : "🍔"}
+              {i18n.language === "fr" ? "🍔" : "🥐"}
             </button>
           </div>
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <a href="#" className="inline-flex space-x-6">
-              <span className="text-indigo-400 bg-indigo-500/10 ring-indigo-500/20 rounded-full px-3 py-1 text-sm font-semibold leading-6 ring-1 ring-inset">
+              <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
                 {t("translateWithWeblate")}
               </span>
-              <span className="text-gray-300 inline-flex items-center space-x-2 text-sm font-medium leading-6">
+              <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
                 <span> {t("githubIntegration")}</span>
                 <ChevronRight
-                  className="text-gray-500 h-5 w-5"
+                  className="h-5 w-5 text-gray-500"
                   aria-hidden="true"
                 />
               </span>
             </a>
           </div>
-          <h1 className="text-4xl sm:text-6xl mt-10 font-bold tracking-tight text-white">
+          <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
             {t("title")}
           </h1>
-          <p className="text-gray-300 mt-6 text-lg leading-8">
+          <p className="mt-6 text-lg leading-8 text-gray-300">
             {t("subTitle")}
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <a
               href="#"
-              className="bg-indigo-500 hover:bg-indigo-400 focus-visible:outline-indigo-400 rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
             >
               {t("common:getStarted")}
             </a>
@@ -102,7 +102,7 @@ export default function Index() {
               alt="App screenshot"
               width={2432}
               height={1442}
-              className="shadow-2xl w-[76rem] rounded-md bg-white/5 ring-1 ring-white/10"
+              className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
             />
           </div>
         </div>
